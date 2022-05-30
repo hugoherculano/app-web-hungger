@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    border: 0;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background: #424242;
+}
+
+#inicio {
+    background-color: #f9f9f9;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+#root {
+    background-color: #424242;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#root-white {
+    background-color: #000;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* Telas de cadastro Ser Profissional */
+
+.tela-serpro-def {
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 95vh;
+}
+
+.tela-serpro-def header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tela-serpro-def header img {
+    width: 120px;
+}
+
+.tela-serpro-def main h1 {
+    color: #FF7700;
+    font-weight: 600;
+    font-size: 26px;
+    width: 80%;
+}
+
+.tela-serpro-def main img {
+    margin-top: 20px;
+    margin-left: -12px;
+    width: 50%;
+}
+
+.tela-serpro-def footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tela-serpro-def footer a {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    background-color: #FF7700;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+}
+
+.tela-serpro-def footer a:hover {
+    background-color: #d56402;
+}
+
+.tela-serpro-def footer a:last-child {
+    background-color: #fff;
+    color: #FF7700;
+}
+
+.tela-serpro-def footer a:last-child:hover {
+    background-color: #eee;
+}
+
+
+
+.tela-cadastro {
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+.borda {
+    height: 16px;
+}
+
+.tela-cadastro header {
+    background-color: #000;
+    padding: 10px;
+}
+
+.tela-cadastro header img {
+    width: 30%;
+    margin-top: 5px;
+}
+
+.tela-cadastro section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 90vh;
+    padding: 25px;
+}
+
+.tela-cadastro section main h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.tela-cadastro section main input {
+    padding: 15px 0 15px 15px;
+    background-color: #eee;
+    width: 100%;
+    font-size: 18px;
+    border: solid 2px transparent;
+    font-weight: 600;
+    border-radius: 2px;
+    margin-bottom: 5px;
+}
+
+.tela-cadastro section main input::placeholder {
+    color: #424242;
+    font-weight: 400;
+}
+
+.tela-cadastro section main input:hover {
+    border: solid 2px #424242;
+}
+
+.tela-cadastro section main p {
+    font-size: 14px;
+    color: rgb(143, 143, 143);
+}
+
+.tela-cadastro section main span {
+    font-size: 14px;
+    color: #c92918;
+    font-weight: 500;
+}
+
+.tela-cadastro section footer {
+    width: 100%;
+}
+
+.pai-btns-cadastro {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-cadastro-volt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 50%;
+    color: rgb(175, 175, 175);
+    background: #eee;
+}
+
+.btn-cadastro-volt:hover {
+    background: rgb(214, 214, 214);
+}
+
+.btn-cadastro {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    background: #FF7700;
+    color: #fff;
+    padding: 14px 16px;
+    border-radius: 38px;
+}
+
+.btn-cadastro:hover {
+    background: #d56402;
+}
+
+.btn-cadastro svg {
+    padding-left: 5px;
+}
+
+.btn-cadastro:disabled {
+    color: rgb(175, 175, 175);
+    background: rgb(246, 246, 246);
+}
+
+.btn-cadastro:disabled:hover {
+    background: rgb(214, 214, 214);
+}
+
+.btn-cadastro img {
+    width: 70px;
+}
+
+.tela-cadastro section footer p {
+    font-size: 14px;
+    color: rgb(143, 143, 143);
+}
+
+
+.tela-cadastro-suc {
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 95vh;
+}
+
+.tela-cadastro-suc header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tela-cadastro-suc header img {
+    width: 120px;
+}
+
+.tela-cadastro-suc main h1 {
+    color: #FF7700;
+    font-weight: 600;
+    font-size: 26px;
+    width: 80%;
+}
+
+.tela-cadastro-suc main img {
+    margin-top: 20px;
+    margin-left: -12px;
+    width: 50%;
+}
+
+.tela-cadastro-suc footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tela-cadastro-suc footer a {
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px;
+    background-color: #FF7700;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+}
+
+.tela-cadastro-suc footer a:hover {
+    background-color: #d56402;
+}
+
+
+@media (max-width: 320px) {
+
+    .tela-serpro-def main h1 {
+        width: 100%;
+    }
+
+}
