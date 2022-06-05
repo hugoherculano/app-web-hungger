@@ -6,7 +6,7 @@ import Loadinf from '../../Imgs/carregando.gif';
 
 import { HiArrowRight, HiArrowLeft } from 'react-icons/hi';
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Cadastrar() {
 
@@ -184,7 +184,7 @@ function Cadastrar() {
 
     function configArroba(e) {
         let value = e.currentTarget.value;
-        value = value.replace(/[^a-zA-Zs]/g, "");
+        value = value.replace(/[^a-zA-Zs]/g, "").toLowerCase();
         setArroba(value)
         e.currentTarget.value = value;
     }
@@ -205,7 +205,9 @@ function Cadastrar() {
 
                 <div className="tela-cadastro">
                     <header>
-                        <img src={Letrado} alt="logo-hungger" />
+                        <Link to={'/'}>
+                            <img src={Letrado} alt="logo-hungger" />
+                        </Link>
                     </header>
 
                     <section>
@@ -316,13 +318,13 @@ function Cadastrar() {
                             :
                             posi === 6 ?
                             <>
-                            <h2>Alguém indicou você? (Opcional)</h2>
+                            <h2>Quem indicou você? (Opcional)</h2>
                             <div className="borda"></div>
                             <input
                             type="text"
-                            onChange={e => setIndica(e.target.value.trim())}
+                            onChange={e => setIndica(e.target.value.trim().toLocaleLowerCase())}
                             value={indica}
-                            placeholder="@hungger"
+                            placeholder="Digite o @ do indicado(a)"
                             />
                             {erro ?
                             <span>Não existe este usuário! :/</span>
@@ -375,7 +377,7 @@ function Cadastrar() {
                         :
                         posi === 1 ?
                         <footer>
-                            {whats ?
+                            {whats && whats.length === 15 ?
                             <div className="pai-btns-cadastro">
                                 <button className="btn-cadastro-volt"
                                 onClick={ e => setarVoltar(e) }>
@@ -383,8 +385,14 @@ function Cadastrar() {
                                 </button>
 
                                 <button className="btn-cadastro" onClick={ e => setarWhats(e) }>
+                                    {carreg ?
+                                    <img src={Loadinf} alt="loading-hungger" />
+                                    :
+                                    <>
                                     Avançar
-                                    <HiArrowRight size={22} />
+                                    <HiArrowRight size={26} />
+                                    </>
+                                    }
                                 </button>
                             </div>
                             :
@@ -406,7 +414,7 @@ function Cadastrar() {
                         :
                         posi === 2 ?
                         <footer>
-                            {nome ?
+                            {nome && nome.length >= 3 ?
                             <div className="pai-btns-cadastro">
                                 <button className="btn-cadastro-volt"
                                 onClick={ e => setarVoltar(e) }>
@@ -438,7 +446,7 @@ function Cadastrar() {
                         :
                         posi === 3 ?
                         <footer>
-                            {arroba ?
+                            {arroba && arroba.length >= 3 ?
                             <div className="pai-btns-cadastro">
 
                                 <button className="btn-cadastro-volt"
@@ -448,8 +456,14 @@ function Cadastrar() {
 
                                 <button className="btn-cadastro"
                                 onClick={ e => setarArroba(e) }>
+                                    {carreg ?
+                                    <img src={Loadinf} alt="loading-hungger" />
+                                    :
+                                    <>
                                     Avançar
                                     <HiArrowRight size={26} />
+                                    </>
+                                    }
                                 </button>
 
                             </div>                            
@@ -471,7 +485,7 @@ function Cadastrar() {
                         :
                         posi === 4 ?
                         <footer>
-                            {cpf ?
+                            {cpf && cpf.length === 14 ?
                             <div className="pai-btns-cadastro">
 
                                 <button className="btn-cadastro-volt"
@@ -481,8 +495,14 @@ function Cadastrar() {
 
                                 <button className="btn-cadastro"
                                 onClick={ e => setarCpf(e) }>
+                                    {carreg ?
+                                    <img src={Loadinf} alt="loading-hungger" />
+                                    :
+                                    <>
                                     Avançar
                                     <HiArrowRight size={26} />
+                                    </>
+                                    }
                                 </button>
 
                             </div>                            
@@ -504,7 +524,7 @@ function Cadastrar() {
                         :
                         posi === 5 ?
                         <footer>
-                            {pass ?
+                            {pass && pass.length > 3 ?
                             <div className="pai-btns-cadastro">
 
                                 <button className="btn-cadastro-volt"
@@ -539,16 +559,30 @@ function Cadastrar() {
                         <footer>
                             <div className="pai-btns-cadastro">
 
+                                {carreg ?
+                                <>
+                                <button className="btn-cadastro-volt">
+                                    <HiArrowLeft size={26} />
+                                </button>
+
+                                <button className="btn-cadastro">
+                                    <img src={Loadinf} alt="loading-hungger" />
+                                </button>
+                                </>
+                                :
+                                <>
                                 <button className="btn-cadastro-volt"
                                 onClick={ e => setarVoltar(e) }>
                                     <HiArrowLeft size={26} />
                                 </button>
-
+                                
                                 <button className="btn-cadastro"
                                 onClick={ e => setarIndicado(e) }>
                                     Finalizar
                                     <HiArrowRight size={26} />
                                 </button>
+                                </>
+                                }
 
                             </div>
 

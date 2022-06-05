@@ -1,13 +1,14 @@
 import React from "react";
 
 
-import Banner from '../../Imgs/sucesso.gif';
+import Banner from '../../Imgs/pizza.gif';
 import Letrado from '../../Imgs/letrado.png';
 
-import { Link } from 'react-router-dom'
 
+function Ensaio() {
 
-function CadSucesso() {
+    const username = localStorage.getItem('@Hungger:username');
+
     return (
         <>
             <div id="root-white">
@@ -18,12 +19,11 @@ function CadSucesso() {
                     </header>
                     
                     <main>
-                        <h1>Bem-vindo(a) ao melhor delivery do Brasil!🧡</h1>
-                        <img src={Banner} alt="felicidade-hungger" />
+                        <h1>{ username }, a partir de amanhã estaremos funcionando!</h1>
+                        <img src={Banner} alt="coracao-hungger" />
                     </main>
                     
                     <footer>
-                        <Link to={'/login'}>Fazer login</Link>
                     </footer>
                 </div>
 
@@ -32,4 +32,4 @@ function CadSucesso() {
     )
 }
 
-export default CadSucesso;
+export default Ensaio;

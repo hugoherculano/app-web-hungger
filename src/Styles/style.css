@@ -11,12 +11,12 @@
     border: 0;
 }
 
-img {
-    width: 100%;
+body {
+    background: #000;
 }
 
-body {
-    background: #424242;
+img {
+    width: 100%;
 }
 
 #inicio {
@@ -160,7 +160,7 @@ body {
 }
 
 .tela-cadastro section main input::placeholder {
-    color: #424242;
+    color: rgb(175, 175, 175);
     font-weight: 400;
 }
 
@@ -301,6 +301,368 @@ body {
 .tela-cadastro-suc footer a:hover {
     background-color: #d56402;
 }
+
+
+
+
+#root-home {
+    background-color: #424242;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.homeMenuUpDown {
+    background-color: #FF7700;
+    max-width: 500px;
+    width: 100%;
+    height: 115px;
+    position: fixed;
+    z-index: 9999;
+    padding: 20px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+
+.homeMenuUpDown-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.homeMenuUpDown-footer section {
+    background-color: #000;
+    color: #FF7700;
+    display: flex;
+    align-items: center;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.homeMenuUpDown-on {
+    display: block;
+}
+
+.homeMenuUpDown-off {
+    display: none;
+}
+
+.homeHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.homeHeader-top {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px 5px 20px;
+}
+
+.homeHeader-top div {
+    width: 30px;
+}
+
+.homeHeader-top h1 {
+    margin-left: 8px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.homeHeader section {
+    display: flex;
+    background-color: #FF7700;
+    color: #000;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+}
+
+.homeCarteira {
+    padding: 0px 18px 10px 18px;
+}
+
+.homeCarteira-content {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 15px 20px 15px 20px;
+}
+
+.homeCarteira-content div {
+    display: flex;
+    align-items: center;
+    color: #707070;
+}
+
+.homeCarteira-content div svg {
+    margin-right: 10px;
+    color: #909090;
+}
+
+.homeCarteira-content div h3 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.homeCarteira-content p {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #909090;
+}
+
+.homeCarteira-content h2 {
+    margin-top: 2px;
+    font-size: 24px;
+    color: #626262;
+}
+
+.homeCategorys-content  {
+    display: flex;
+    overflow-x: scroll;
+    padding-left: 20px;
+}
+
+.homeCategorys-content section  {
+    padding: 10px 10px 10px 0;
+    text-align: center;
+}
+
+.homeCategorys-content section p  {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 8px;
+}
+
+.homeCategorys-content section button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #000;
+}
+
+.homeCategorys-content section button:hover {
+    background-color: #FF7700;
+}
+
+
+
+.homeListaRestaurantes {
+    padding: 20px;
+}
+
+.homeListaRestaurantes li {
+    margin-bottom: 10px;
+    display: flex;
+    padding: 7px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.homeListaRestaurantes .online-cad {
+    background-color: #000;
+}
+
+.homeListaRestaurantes .offline-cad {
+    background-color: #303030;
+}
+
+
+.homeListaRestaurantes-card-img {
+    background-color: #707070;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.homeListaRestaurantes-card-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.offline-cad .homeListaRestaurantes-card-img img {
+    opacity: 0.3;
+}
+
+.homeListaRestaurantes-card-text-1 {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.homeListaRestaurantes-card-text-1 .online {
+    color: #fff;
+}
+
+.homeListaRestaurantes-card-text-1 .offline {
+    color: #909090;
+}
+
+.homeListaRestaurantes-card-text-2 {
+    font-size: 10px;
+    font-weight: 500;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.homeListaRestaurantes-card-text-2 p {
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.text2-on p:first-child {
+    background-color: #424242;
+    color: #fff;
+    margin-right: 6px;
+}
+
+.text2-on p:last-child {
+    background-color: #FFD5AF;
+    color: #9E4B01;
+}
+
+.text2-off p:first-child {
+    background-color: #424242;
+    color: #909090;
+    margin-right: 6px;
+}
+
+.text2-off p:last-child {
+    background-color: #424242;
+    color: #909090;
+}
+
+.homeListaRestaurantes-card-text-3 {
+    display: flex;
+    width: 100%;
+}
+
+.homeListaRestaurantes-card-text-3 span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.homeListaRestaurantes-card-text-3 span div {
+    height: 9px;
+    width: 9px;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 50%;
+}
+
+.empresa-on {
+    color: #fff;
+}
+
+.empresa-on div {
+    background-color: #FF7700;
+}
+
+.empresa-off {
+    color: #909090;
+}
+
+.empresa-off div {
+    background-color: #626262;
+}
+
+.homeListaRestaurantes-card-text-3 div {
+    display: flex;
+    align-items: stretch;
+}
+
+.homeListaRestaurantes-card-text-3 div img {
+    width: 20px;
+    height: 21px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 2px;
+}
+
+.homeListaRestaurantes-card-text-3 div p {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    padding-right: 4px;
+    padding-left: 4px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-weight: 600;
+}
+
+
+.frete-normal img {
+    background-color: transparent;
+}
+
+.frete-normal {
+    background-color: transparent;
+    color: #fff;
+}
+
+
+.frete-gratis img {
+    background-color: #d56402;
+}
+
+.frete-gratis p {
+    background-color: #FF7700;
+    color: #fff;
+}
+
+
+.empresa-off2 img {
+    background-color: #383838;
+}
+
+.empresa-off2 p {
+    background-color: #424242;
+    color: #909090;
+}
+
+
+.homeFooter {
+    max-width: 500px;
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    background-color: #292929;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+}
+
+.homeFooter a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homeFooter a svg {
+    color: #FF7700;
+}
+
+.homeFooter a p {
+    margin-top: 2px;
+    font-size: 11px;
+    color: #fff;
+}
+
 
 
 @media (max-width: 320px) {

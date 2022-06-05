@@ -6,7 +6,7 @@ import Loadinf from '../../Imgs/carregando.gif';
 
 import { HiArrowRight } from 'react-icons/hi';
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Login({ updateUserId }) {
 
@@ -65,7 +65,9 @@ function Login({ updateUserId }) {
 
                 <div className="tela-cadastro">
                     <header>
-                        <img src={Letrado} alt="logo-hungger" />
+                        <Link to={'/'}>
+                            <img src={Letrado} alt="logo-hungger" />
+                        </Link>
                     </header>
 
                     <section>
@@ -103,18 +105,24 @@ function Login({ updateUserId }) {
                         <footer>
                             {email && pass ?
                             <div className="pai-btns-cadastro">
+                                
+
+                                {carreg ?
+                                <>
+                                <button></button>
+                                <button className="btn-cadastro">
+                                    <img src={Loadinf} alt="loading-hungger" />
+                                </button>
+                                </>
+                                :
+                                <>
                                 <button></button>
                                 <button className="btn-cadastro" onClick={ e => loginUser(e) }>
-                                    {carreg ?
-                                    <img src={Loadinf} alt="loading-hungger" />
-                                    :
-                                    <>
                                     Logar
                                     <HiArrowRight size={26} />
-                                    </>
-                                    }
-                                    
                                 </button>
+                                </>
+                                }
                             </div>
                             :
                             <div className="pai-btns-cadastro">
